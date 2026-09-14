@@ -1,25 +1,40 @@
 <!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RPM Boss — Privacy Policy</title>
+<title>RPM Boss - Privacy Policy</title>
 <style>
   body{font:16px/1.6 system-ui,sans-serif;max-width:44rem;margin:3rem auto;padding:0 1.25rem;color:#1a1a1a}
   h1{font-size:1.6rem} h2{font-size:1.1rem;margin-top:2rem}
 </style>
-<h1>Privacy Policy — RPM Boss</h1>
-<p><em>Last updated: 11 September 2026</em></p>
+<h1>Privacy Policy - RPM Boss</h1>
+<p><em>Last updated: 15 September 2026</em></p>
 
 <h2>Summary</h2>
-<p>RPM Boss listens to a running engine and tells you how fast it is turning. The
-recording is made on your phone, analysed on your phone, and gone when you close
-the app or record again. No audio is ever stored permanently or sent anywhere.
-The app has no account system, no analytics, and no advertising.</p>
+<p>RPM Boss listens to a running engine and tells you how fast it is turning,
+either live on a tachometer dial or from a few seconds you record. Either way the
+sound is captured on your phone, analysed on your phone, and gone when you stop.
+No audio is ever stored without you asking for it, and none of it is sent
+anywhere. The app has no account system, no analytics, and no advertising.</p>
+
+<h2>Live mode</h2>
+<p>When you press Start, the app listens through the microphone for as long as you
+leave it running, and shows the engine speed on the dial. Nothing is recorded. The
+sound passes through a buffer about two seconds long, which is overwritten
+continuously and thrown away when you press Stop, and nothing on that path is
+written to storage. The screen is kept awake while it listens, so the display does
+not switch off mid-measurement.</p>
 
 <h2>The recording</h2>
 <p>When you press Record, the app captures up to ten seconds of sound through the
 microphone. Those samples are held in memory while you crop them and read the
 result. They are not written to storage, and they are replaced the moment you
 record again or load a different file. Closing the app discards them.</p>
+
+<h2>Saving a recording</h2>
+<p>A recording can be saved as a WAV file, but only when you ask for it. The app
+writes the file and hands it to Android's share sheet, so you choose where it
+goes. Nothing is saved unless you press Download, and the app still has no way to
+send it anywhere itself.</p>
 
 <h2>What the app does with the sound</h2>
 <p>The analysis runs entirely on your device: it filters the audio, finds the
@@ -34,15 +49,17 @@ hands it only the one file you chose, and that file is read, not copied or
 uploaded.</p>
 
 <h2>Data stored on your device</h2>
-<p>Three settings, so the app looks the way you left it: your chosen language,
-light or dark theme, and whether the optional "expected range" panel is open or
-closed. They contain no audio and no personal information, and they are deleted
-when you uninstall the app.</p>
+<p>A handful of settings, so the app works and looks the way you left it: your
+chosen language, light or dark theme, whether the optional "expected range" panel
+is open or closed, whether your engine is a two-stroke or a four-stroke, and how
+the tachometer dial is drawn, meaning where its numbers end, where the redline
+starts and how quickly the needle follows. They contain no audio and no personal
+information, and they are deleted when you uninstall the app.</p>
 
 <h2>Permissions</h2>
-<p>The app requests <code>RECORD_AUDIO</code>, used only while you are recording,
-and only in the foreground. It does not record in the background and cannot listen
-when it is not on screen. If you decline, the app still works for audio files you
+<p>The app requests <code>RECORD_AUDIO</code>, used only while you are recording
+or while live mode is listening, and only in the foreground. It does not use the
+microphone in the background and cannot listen when it is not on screen. If you decline, the app still works for audio files you
 already have. That is the only permission the app requests. In particular it does
 not hold <code>INTERNET</code>, so it cannot make a network connection of any
 kind, whatever it might be asked to do.</p>

@@ -25,8 +25,8 @@
 <h2>The location the app sets</h2>
 <p>While a route or location is running, the app passes positions to Android's mock-location system, so other apps on your phone receive them. This works only after you turn on Developer options and choose LocMoc as the mock location app yourself. It stops when you press Stop. The app keeps a notification visible the whole time it runs.</p>
 
-<h2>Map and elevation data from third parties</h2>
-<p>To draw the map, the app downloads map data from <a href="https://openfreemap.org">OpenFreeMap</a>, based on OpenStreetMap. If you turn on Altitude, it also downloads elevation data (Mapzen Terrain Tiles, hosted on Amazon Web Services) for the area of your route. As with any map app, those servers receive your IP address and which map area is requested, which reveals roughly the area you are looking at or mocking. LocMoc sends them nothing else: no route, no account and no device identifier. Their own privacy policies apply to that traffic.</p>
+<h2>Map and elevation data</h2>
+<p>LocMoc collects no data: nothing you do in the app is sent to the developer, who has no server. To draw the map, your phone downloads map tiles directly from <a href="https://openfreemap.org">OpenFreeMap</a>, based on OpenStreetMap; if you turn on Altitude, it also downloads elevation tiles (Mapzen Terrain Tiles on Amazon Web Services) for the area of your route. Like any map app, these are ordinary web requests for a map area: they carry no route, no account and no device identifier. OpenFreeMap states it keeps no user database and uses no cookies.</p>
 
 <h2>Files you choose</h2>
 <p>You can import GPX, KML or GeoJSON track files. The app reads only the file you pick or share with it, and saves the track inside the app on your phone. It cannot browse your storage.</p>
@@ -35,7 +35,7 @@
 <p>Your saved mocks and a few settings: map style, language, and whether Jitter and Altitude are on. Elevation tiles are cached to avoid downloading them again. All of it stays on your phone and is deleted when you uninstall the app.</p>
 
 <h2>Permissions</h2>
-<p><code>ACCESS_FINE_LOCATION</code> and <code>ACCESS_COARSE_LOCATION</code> show your real position on the map, and are required to run the location service in the foreground. <code>POST_NOTIFICATIONS</code> shows the running notification with its Pause and Stop buttons. <code>FOREGROUND_SERVICE</code> and <code>FOREGROUND_SERVICE_LOCATION</code> keep the location updating while the screen is off. <code>WAKE_LOCK</code> does the same while the phone sleeps. <code>INTERNET</code> downloads map and elevation data. <code>ACCESS_MOCK_LOCATION</code> provides the location you set, and only works after you select LocMoc in Developer options. The app does not request background location.</p>
+<p><code>ACCESS_FINE_LOCATION</code> and <code>ACCESS_COARSE_LOCATION</code> show your real position on the map, and are required to run the location service in the foreground. <code>POST_NOTIFICATIONS</code> shows the running notification with its Pause and Stop buttons. <code>FOREGROUND_SERVICE</code> and <code>FOREGROUND_SERVICE_LOCATION</code> keep the location updating while the screen is off. <code>WAKE_LOCK</code> does the same while the phone sleeps. <code>INTERNET</code> downloads map and elevation data, and <code>ACCESS_NETWORK_STATE</code> and <code>ACCESS_WIFI_STATE</code> let the map library check whether a connection is available. <code>ACCESS_MOCK_LOCATION</code> provides the location you set, and only works after you select LocMoc in Developer options. The app does not request background location.</p>
 
 <h2>Children</h2>
 <p>The app is distributed for users aged 18 and over, and collects no data from anyone, including children under 13.</p>
